@@ -28,6 +28,9 @@ function App() {
         throw new Error(error);
       }
     },
+    staleTime: 5 * 60 * 1000, //5 minutes before React Query considers it stale
+    refetchOnMount: false, //Prevents refetch when navigating between pages
+    refetchOnWindowFocus: true, //Ensures fresh data if user switches back
     retry: false,
   });
 
