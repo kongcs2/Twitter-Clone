@@ -48,7 +48,7 @@ const ProfilePage = () => {
       }
     },
   });
-  const { isUpdatingProfile, updateProfile } = useUpdateUserProfile();
+  const { isUpdatingProfile, updateProfile } = useUpdateUserProfile(username);
 
   const isMyProfile = authUser._id === user?._id;
   const memberSinceDate = formatMemberSinceDate(user?.createdAt);
